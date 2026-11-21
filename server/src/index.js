@@ -143,7 +143,7 @@ app.get("/api/documents/:id/download", requireAuth, async (req, res) => {
 
   return res.status(404).json({ message: "Document not found" });
 });
-console.log(process.env.MONGO_URI)
+// console.log(process.env.MONGO_URI)
 mongoose
   .connect(process.env.MONGO_URI || "mongodb://127.0.0.1:27017/car-insurance")
   .then(() => {
